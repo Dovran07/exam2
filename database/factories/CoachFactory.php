@@ -17,7 +17,8 @@ class CoachFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->firstName(),
+            'surname' => fake()->lastName(),
         ];
     }
 }
