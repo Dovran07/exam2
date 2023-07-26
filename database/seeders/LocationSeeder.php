@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Location;
 use Illuminate\Database\Seeder;
 
 class LocationSeeder extends Seeder
@@ -12,6 +12,16 @@ class LocationSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $objs = [
+            ['name' => 'Mir1'],
+            ['name' => 'Univermag'],
+            ['name' => 'Gulzemin'],
+        ];
+
+        foreach ($objs as $obj) {
+            $location = new Location();
+            $location->name = $obj['name'];
+            $location->save();
+        }
     }
 }
