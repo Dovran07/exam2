@@ -25,6 +25,7 @@ return new class extends Migration
             $table->foreign('coach_id')->references('id')->on('coaches')->cascadeOnDelete();
             $table->unsignedBigInteger('days_id')->index()->nullable();
             $table->foreign('days_id')->references('id')->on('days')->nullOnDelete();
+            $table->timestamps();
         });
     }
 
