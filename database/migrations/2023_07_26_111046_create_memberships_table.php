@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->unsignedDouble('price')->default(0);
+            $table->unsignedBigInteger('days_id')->index();
+            $table->foreign('days_id')->references('id')->on('days')->cascadeOnDelete();
         });
     }
 

@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('surname');
+            $table->date('birthday');
+            $table->boolean('gender');
+            $table->unsignedBigInteger('salon_id')->index();
+            $table->foreign('salon')->references('id')->on('salons')->cascadeOnDelete();
+            $table->unsignedBigInteger('membership_id')->index();
+            $table->foreign('membership')->references('id')->on('memberships')->cascadeOnDelete();
+            $table->unsignedBigInteger('coach_id')->index();
+            $table->foreign('coach_id')->references('id')->on('coaches')->cascadeOnDelete();
+            $table->unsignedBigInteger('days_id')->index()->nullable();
+            $table->foreign('days_id')->references('id')->on('days')->nullOnDelete();
         });
     }
 
