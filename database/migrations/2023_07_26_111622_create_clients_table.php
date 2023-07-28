@@ -18,13 +18,13 @@ return new class extends Migration
             $table->date('birthday');
             $table->boolean('gender');
             $table->unsignedBigInteger('salon_id')->index();
-            $table->foreign('salon')->references('id')->on('salons')->cascadeOnDelete();
+            $table->foreign('salon_id')->references('id')->on('salons')->cascadeOnDelete();
             $table->unsignedBigInteger('membership_id')->index();
-            $table->foreign('membership')->references('id')->on('memberships')->cascadeOnDelete();
+            $table->foreign('membership_id')->references('id')->on('memberships')->cascadeOnDelete();
             $table->unsignedBigInteger('coach_id')->index();
-            $table->foreign('coach_id')->references('id')->on('coaches')->cascadeOnDelete();
-            $table->unsignedBigInteger('days_id')->index()->nullable();
-            $table->foreign('days_id')->references('id')->on('days')->nullOnDelete();
+            $table->foreign('coach_id')->references('id')->on('coaches');
+            $table->unsignedBigInteger('days_id')->index();
+            $table->foreign('days_id')->references('id')->on('days')->cascadeOnDelete();
             $table->timestamps();
         });
     }

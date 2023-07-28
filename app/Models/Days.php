@@ -14,6 +14,7 @@ class Days extends Model
     public $timestamps = false;
 
 
+
     public function membership(): HasMany
     {
         return $this->hasMany(Membership::class);

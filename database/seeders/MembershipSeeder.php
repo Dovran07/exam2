@@ -25,5 +25,8 @@ class MembershipSeeder extends Seeder
             $membership->price = $obj['price'];
             $membership->save();
         }
+
     }
+
+
 }

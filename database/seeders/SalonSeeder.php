@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Location;
 use App\Models\Salon;
 use Illuminate\Database\Seeder;
 

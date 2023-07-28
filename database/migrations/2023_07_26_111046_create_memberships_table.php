@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedDouble('price')->default(0);
-            $table->unsignedBigInteger('days_id')->index();
+            $table->unsignedBigInteger('days_id')->index()->nullable();
             $table->foreign('days_id')->references('id')->on('days')->cascadeOnDelete();
         });
     }

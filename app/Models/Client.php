@@ -20,6 +20,16 @@ class Client extends Model
         'birthday' => 'date',
     ];
 
+    protected $fillable = [
+        'name',
+        'surname',
+        'birthday',
+        'gender',
+        'salon_id',
+        'membership_id',
+        'coach_id',
+        'days_id',
+    ];
 
 
     public function salon(): BelongsTo

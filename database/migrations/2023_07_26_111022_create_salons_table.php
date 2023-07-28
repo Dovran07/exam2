@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('salons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('location_id')->index();
+            $table->unsignedBigInteger('location_id')->index()->nullable();
             $table->foreign('location_id')->references('id')->on('locations')->cascadeOnDelete();
         });
     }
