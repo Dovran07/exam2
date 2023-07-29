@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             MembershipSeeder::class, // 3
             SalonSeeder::class, // 3
         ]);
-        \App\Models\Client::factory(500)->create();
         \App\Models\Coach::factory(10)->create();
+        \App\Models\Client::factory(500)->create();
     }
 }

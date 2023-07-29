@@ -14,6 +14,10 @@ class Days extends Model
     public $timestamps = false;
 
 
+    protected $fillable = [
+        'name',
+    ];
+
 
     public function membership(): HasMany
     {

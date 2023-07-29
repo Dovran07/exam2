@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('membership_id')->index();
             $table->foreign('membership_id')->references('id')->on('memberships')->cascadeOnDelete();
             $table->unsignedBigInteger('coach_id')->index();
-            $table->foreign('coach_id')->references('id')->on('coaches');
+            $table->foreign('coach_id')->references('id')->on('coaches')->cascadeOnDelete();
             $table->unsignedBigInteger('days_id')->index();
             $table->foreign('days_id')->references('id')->on('days')->cascadeOnDelete();
             $table->timestamps();

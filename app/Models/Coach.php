@@ -17,6 +17,11 @@ class Coach extends Model
 
     public $timestamps = false;
 
+    protected $fillable = [
+        'name',
+        'days_id',
+    ];
+
 
     public function days(): BelongsTo
     {
