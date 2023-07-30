@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    public function index()
+    public function index(Request $request)
         {
+            dd();
             return Client::with('salon','membership', 'coach', 'days')
                 ->inRandomOrder()
                 ->first();
