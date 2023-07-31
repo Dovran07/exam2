@@ -4,23 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Coach;
-use App\Models\Days;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $days = Days::withCount('clients')
+        $coaches = Coach::withCount('clients')
             ->orderBy('clients_count', 'desc')
             ->take(5)
             ->get();
 
-        $daysClients = [];
-        foreach ($days as $day) {
-            $daysClients[] = [
-                'day' => $day,
+        $coachClients = [];
+        foreach ($coaches as $coach) {
+            $coachClients[] = [
+                'coach' => $coach,
                 'clients' => Client::where('client_id', $client->id)
+                    ->where('active', 1)
                     ->with('days', 'location', 'salon', 'membership', 'coach')
                     ->take(5)
                     ->get(),
@@ -29,7 +29,7 @@ class HomeController extends Controller
 
         return view('home.index')
             ->with([
-                'daysClients' => $daysClients,
+                'coachClients' => $coachClients,
             ]);
     }
 }
