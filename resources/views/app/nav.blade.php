@@ -1,19 +1,19 @@
-<ul class="navbar-nav col-lg-6 justify-content-lg-center">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-    </li>
-</ul>
+<nav class="navbar fixed-top navbar-expand-lg bg-body-secondary rounded" >
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex">
+            <a class="navbar-brand col-lg-4 me-0 text-danger fw-bold" href="#"> <i class="bi-trophy text-danger"></i>  Görogly Fitness</a>
+            <ul class="navbar-nav col-lg-8 justify-content-lg-end">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold text-danger" aria-current="page" href="#">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold text-danger" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
