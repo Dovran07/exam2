@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PriceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::controller(HomeController::class)
     ->group(function () {
         Route::get('', 'index')->name('home');
+    });
+
+Route::controller(PriceController::class)
+    ->group(function () {
+        Route::get('', 'pricing')->name('app');
     });
 
 Route::controller(ClientController::class)

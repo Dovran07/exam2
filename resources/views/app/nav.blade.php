@@ -11,7 +11,7 @@
                     <a class="nav-link active fw-semibold text-danger" aria-current="page" href="#">Customers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold text-danger" href="#">Pricing</a>
+                    <a class="nav-link fw-semibold text-danger" href={{'app.pricing'}}>Pricing</a>
                 </li>
             </ul>
         </div>
